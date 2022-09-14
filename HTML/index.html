@@ -19,14 +19,14 @@
     <title>Car Musc</title>
   </head>
   <body>
-    <div class="main-banner">
+    <div id="main" class="main-banner">
       <header>
         <div class="nav-bar center-box">
           <ul class="nav-list">
-            <li class="nav-list-item">Главная</li>
-            <li class="nav-list-item">Оклейка автомобилей</li>
-            <li class="nav-list-item">Детейлинг автомобилей</li>
-            <li class="nav-list-item">Галерея работ</li>
+            <li class="nav-list-item"> <a class="nav-list-link" href="#main">Main</a> </li>
+            <li class="nav-list-item"><a class="nav-list-link" href="#stickers">Car stickers</a></li>
+            <li class="nav-list-item"> <a class="nav-list-link" href="#detaling">Car detailing</a></li>
+            <li class="nav-list-item"><a class="nav-list-link" href="#gallery">Gallery of works </a></li>
           </ul>
           <div class="menu-icon">
             <img class="menu-icon-img" src="/Group 6.png" alt="menu icon" />
@@ -252,7 +252,7 @@
           </div>
         </div>
       </div>
-      <div class="services center-box">
+      <div id="stickers" class="services center-box">
         <div class="services-title-box">
           <h2 class="srv-title">Наши услуги</h2>
           <img src="/Group 2.png" alt="" />
@@ -308,6 +308,7 @@
           </div>
         </div>
       </div>
+
       <div class="advantages center-box">
         <div class="adv-img-box">
           <img class="adv-img" src="/adv-car.png" alt="" />
@@ -354,7 +355,7 @@
           </p>
         </div>
       </div>
-      <div class="works">
+      <div id="gallery" class="works">
         <h2 class="works-title">Наши работы</h2>
         <img src="/Group 2.png" alt="" />
         <img class="works-img" src="/ourworks.png" alt="" />
@@ -384,9 +385,9 @@
                   </div>
                   </a>
                 <div class="location-box">
-                  <div class="location">
-                    <a href="" class="input-link"
-                      ><img src="/loc.png" alt="" /> Eu faucibus et rutrum fringilla
+                  <div class="location" >
+                    <a  class="input-link" id="input-link"
+                      ><img  src="/loc.png" alt="" /> Eu faucibus et rutrum fringilla
                       orci nunc</a
                     >
                   </div>
@@ -399,10 +400,20 @@
                     >
                   </div>
                 </div>
-           
+                
             </div>
           </div>
           </div>
+
+          <div id="mapContainer" class="map-container">
+       
+            <div class="map-content">
+              <span class="close">&times;</span>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d327952.4182831036!2d19.724694226515123!3d50.0464284278981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471644c0354e18d1%3A0xb46bb6b576478abf!2z0JrRgNCw0LrQvtCyLCDQn9C-0LvRjNGI0LA!5e0!3m2!1sru!2sby!4v1663185710279!5m2!1sru!2sby" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          
+          </div>
+
         <div class="form-last-line">
           <div class="center-box last-line">
             <p class="copyright">
@@ -423,5 +434,6 @@
       
       </footer>
     </div>
+    <script src="/JS/index.js"></script>
   </body>
 </html>
