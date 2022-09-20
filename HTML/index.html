@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="/CSS/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -171,13 +176,16 @@
           </div>
         </div>
       </div>
-      <div class="slider">
+    
+     
+      <div class="slider-container " id="slider">
         <div class="slider-btn">
-          <img src="/leftarrow.png" alt="left arrow button" />
-          <img src="/rightarrow.png" alt="right arrow button" />
+          <img id="left-arrow" class="arrow swiper-button-prev" src="/leftarrow.png" alt="left arrow button"  />
+          <img id="right-arrow" class="arrow swiper-button-next" src="/rightarrow.png" alt="right arrow button" />
         </div>
-        <div class="slider-boxes center-box">
-          <div class="slider-box">
+    <div class="swiper mySwiper slider">
+        <div class="swiper-wrapper slider-boxes ">
+          <div class="slider-box swiper-slide">
             <img class="slider-img" src="/slider1.png" alt="car" />
             <div class="slider-info-box">
               <p class="slider-info">
@@ -186,7 +194,7 @@
               </p>
             </div>
           </div>
-          <div class="slider-box">
+          <div class="slider-box swiper-slide">
             <img class="slider-img" src="/slider2.png.png" alt="car" />
             <div class="slider-info-box">
               <p class="slider-info">
@@ -195,7 +203,7 @@
               </p>
             </div>
           </div>
-          <div class="slider-box">
+          <div class="slider-box swiper-slide">
             <img class="slider-img" src="/slider3.png" alt="car" />
             <div class="slider-info-box">
               <p class="slider-info">
@@ -204,7 +212,36 @@
               </p>
             </div>
           </div>
+          <div class="slider-box swiper-slide">
+            <img class="slider-img" src="/Media/105097-car-tuning-BMW-blue-cars-numbers-vehicle-BMW-M2-BMW-2-Series.jpg" alt="car" />
+            <div class="slider-info-box">
+              <p class="slider-info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                vulputate laoreet sapien a sit ante.
+              </p>
+            </div>
+          </div>
+          <div class="slider-box swiper-slide">
+            <img class="slider-img" src="/Media/512x512bb.jpg" alt="car" />
+            <div class="slider-info-box">
+              <p class="slider-info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                vulputate laoreet sapien a sit ante.
+              </p>
+            </div>
+          </div>
+          <div class="slider-box swiper-slide">
+            <img class="slider-img" src="/Media/46-465149_1920x1440-download-racing-car-wallpaper-for-mobile-race.jpg" alt="car" />
+            <div class="slider-info-box">
+              <p class="slider-info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                vulputate laoreet sapien a sit ante.
+              </p>
+            </div>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
+      </div>
       </div>
       <div class="advantages center-box">
         <div class="adv-info-box">
@@ -435,5 +472,62 @@
       </footer>
     </div>
     <script src="/JS/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      let swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+
+      let width = window.innerWidth
+        console.log(width)
+if (width <= 800 ) {
+  let swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        slidesPerGroup: 2,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+}
+if (width <= 500 ) {
+  let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    slidesPerGroup:1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    }
+  });
+}
+    </script>
+    
   </body>
 </html>
