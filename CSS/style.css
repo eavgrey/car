@@ -552,7 +552,9 @@ footer {
     width: 100%;
   }
 }
-
+.slider-container {
+  margin-bottom: 180px;
+}
 .map-container {
   display: none;
   position: fixed;
